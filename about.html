@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>About | Orienteering</title>
+  <link rel="stylesheet" href="css/style.css">
+    <script src="js/nav.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/timeline-scroll.js"></script>
+
+</head>
+
+<body data-page="about">
+
+  <!-- NAVIGATION -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ABOUT CONTENT -->
+  <main class="about">
+
+    <!-- HEADER -->
+    <section class="about-hero reveal">
+      <h1>Tentang Orienteering</h1>
+      <p>
+        Sebuah olahraga petualangan yang menggabungkan
+        navigasi, strategi, dan ketahanan di alam terbuka.
+      </p>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="about-content">
+
+      <div class="about-card reveal">
+        <h2>Apa itu Orienteering?</h2>
+        <p>
+          Orienteering adalah olahraga navigasi di alam terbuka
+          di mana peserta harus menemukan sejumlah titik kontrol
+          dengan bantuan peta dan kompas, dalam waktu secepat mungkin.
+        </p>
+        <p>
+          Olahraga ini tidak hanya mengandalkan kecepatan fisik,
+          tetapi juga kemampuan berpikir, membaca medan, dan
+          mengambil keputusan secara tepat.
+        </p>
+      </div>
+
+      <div class="about-card reveal">
+        <h2>Asal dan Perkembangan</h2>
+        <p>
+          Orienteering berasal dari negara-negara Skandinavia
+          pada awal abad ke-20 dan awalnya digunakan sebagai
+          latihan navigasi militer.
+        </p>
+        <p>
+          Seiring waktu, olahraga ini berkembang menjadi cabang
+          olahraga internasional yang dipertandingkan secara
+          resmi di berbagai negara, termasuk Indonesia.
+        </p>
+      </div>
+
+      <!-- TIMELINE -->
+<section class="timeline-section reveal">
+  <h2 class="timeline-title">Sejarah Singkat Orienteering</h2>
+
+  <div class="timeline">
+
+  <div class="timeline-item reveal-left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">Akhir Abad ke-19</span>
+      <p>
+        Cikal bakal orienteering muncul di Skandinavia sebagai
+        latihan navigasi militer untuk melatih ketepatan membaca
+        peta dan pengambilan keputusan di medan terbuka.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">1900–1920</span>
+      <p>
+        Orienteering mulai dikenalkan ke masyarakat umum di Swedia
+        dan Norwegia sebagai aktivitas luar ruang yang edukatif
+        dan menantang.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">1930–1940</span>
+      <p>
+        Kompetisi orienteering pertama mulai diselenggarakan,
+        dengan standar peta yang semakin berkembang dan rute
+        yang dirancang lebih strategis.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">1961</span>
+      <p>
+        International Orienteering Federation (IOF) resmi didirikan
+        sebagai badan dunia yang mengatur peraturan, peta,
+        dan kompetisi orienteering internasional.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">1970–1990</span>
+      <p>
+        Orienteering berkembang ke berbagai negara dan melahirkan
+        variasi baru seperti relay, sprint, dan night orienteering.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-right">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">2000-an</span>
+      <p>
+        Teknologi mulai berperan melalui sistem punching elektronik,
+        peta digital, dan peningkatan akurasi desain medan lomba.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item reveal-left">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content">
+      <span class="timeline-year">Saat Ini</span>
+      <p>
+        Orienteering digunakan dalam olahraga prestasi, pendidikan,
+        pelatihan karakter, serta kegiatan pecinta alam di berbagai
+        belahan dunia, termasuk Indonesia.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</section>
+
+      <div class="about-card reveal">
+        <h2>Nilai dalam Orienteering</h2>
+        <ul>
+          <li>🧭 Kemandirian dalam mengambil keputusan</li>
+          <li>🌲 Kepedulian terhadap alam</li>
+          <li>🗺️ Ketelitian membaca peta</li>
+          <li>🔥 Ketahanan fisik dan mental</li>
+        </ul>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+  <script src="js/nav.js"></script>
+  <script src="js/scroll.js"></script>
+  <script>
+    fetch("navigasi.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

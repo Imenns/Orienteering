@@ -2,23 +2,82 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Orienteering Adventure</title>
+  <title>Home | Orienteering</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<header class="hero">
-  <h1>ORIENTEERING ADVENTURE</h1>
-  <p>Temukan arah, taklukkan tantangan</p>
-  <button onclick="startExplore()">Mulai Jelajah</button>
-</header>
+<body data-page="home">
 
-<section class="cards">
-  <div class="card">🧭 Navigasi</div>
-  <div class="card">🗺️ Peta</div>
-  <div class="card">🏃‍♂️ Kecepatan</div>
-</section>
+  <!-- NAVIGATION -->
+  <div id="nav-placeholder"></div>
 
-<script src="js/script.js"></script>
-</body>
-</html>
+  <!-- HOME CONTENT -->
+  <main class="home">
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <div class="hero-content">
+        <h1 class="hero-title">
+            <span id="typewriter"></span>
+        </h1>
+
+        <p>
+          Olahraga navigasi yang menggabungkan kecepatan,
+          ketepatan membaca peta, dan strategi di alam terbuka.
+        </p>
+        <a href="about.html" class="btn-primary">
+          Pelajari Lebih Lanjut
+        </a>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro reveal">
+      <h2>Apa itu Orienteering?</h2>
+      <p>
+        Orienteering adalah olahraga petualangan di mana peserta
+        harus menemukan titik-titik kontrol menggunakan peta dan
+        kompas dalam waktu tercepat, sambil menentukan rute terbaik.
+      </p>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="feature-card reveal">
+        <h3>Navigasi</h3>
+        <p>
+          Mengasah kemampuan membaca peta dan menentukan arah.
+        </p>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Ketahanan</h3>
+        <p>
+          Menguji fisik dan mental di berbagai medan alam.
+        </p>
+      </div>
+
+      <div class="feature-card reveal">
+        <h3>Strategi</h3>
+        <p>
+          Menentukan rute tercepat dengan keputusan tepat.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SCRIPTS -->
+    <script src="js/nav.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/typewriter.js"></script>
+    <script>
+     fetch("navigasi.html")
+       .then(res => res.text())
+       .then(data => {
+          document.getElementById("nav-placeholder").innerHTML = data;
+        })
+        .catch(error => {
+         console.error("Gagal memuat navigasi:", error);
+       });
+    </script>
