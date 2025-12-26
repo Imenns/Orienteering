@@ -81,3 +81,14 @@
          console.error("Gagal memuat navigasi:", error);
        });
     </script>
+
+ <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+    <script>
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
+  });
+</script>
