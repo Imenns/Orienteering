@@ -1,0 +1,235 @@
+/* ===== ABOUT HERO ===== */
+.about-hero {
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(135deg, #022c22, #064e3b);
+  border-radius: 24px;
+  margin-bottom: 60px;
+}
+
+.about-hero h1 {
+  font-size: 40px;
+  color: #22c55e;
+  margin-bottom: 16px;
+}
+
+.about-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e5e7eb;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* ===== ABOUT CARDS ===== */
+.about-content {
+  display: grid;
+  gap: 32px;
+}
+
+.about-card {
+  background: #022c22;
+  padding: 32px;
+  border-radius: 18px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.about-card:hover {
+  background: #064e3b;
+  transform: translateY(-6px);
+}
+
+.about-card h2 {
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-card ul {
+  padding-left: 20px;
+  color: #e5e7eb;
+}
+
+.about-card li {
+  margin-bottom: 8px;
+}
+
+/* ===== TIMELINE ===== */
+/* ===== TIMELINE ===== */
+.timeline-section {
+  margin: 80px 0;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 32px;
+  color: #22c55e;
+  margin-bottom: 48px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Garis vertikal di tengah */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;             /* tebal garis */
+  height: 100%;
+  background: #22c55e;
+}
+
+/* Box timeline */
+.timeline-item {
+  position: relative;
+  width: 45%;             /* box tidak menempel penuh ke garis */
+  padding: 20px 24px;
+  margin-bottom: 60px;    /* jarak antar box vertikal */
+  background: #022c22;
+  border-radius: 14px;
+  color: #e5e7eb;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Posisi box kiri / kanan */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 55%;             /* jarak dari garis */
+  text-align: left;
+}
+
+/* Dot di samping box, menempel di garis */
+.timeline-dot {
+  position: absolute;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 3px solid #064e3b;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Dot untuk box kiri (odd) */
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -12px;          /* menempel di garis di sisi kanan box kiri */
+  left: auto;
+}
+
+/* Dot untuk box kanan (even) */
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -12px;           /* menempel di garis di sisi kiri box kanan */
+  right: auto;
+}
+
+/* Animasi saat aktif */
+.timeline-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item.active .timeline-dot {
+  transform: scale(1.3);
+  box-shadow: 0 0 14px rgba(34,197,94,0.9);
+}
+
+/* Konten box */
+.timeline-content {
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: #022c22;
+}
+
+.timeline-year {
+  font-weight: 600;
+  color: #22c55e;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Animasi horizontal */
+.reveal-left {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.reveal-right {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.reveal-left.active,
+.reveal-right.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 8px;          /* garis pindah ke kiri */
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    padding-left: 40px; /* jarak dari garis */
+  }
+
+  .timeline-dot {
+    left: 0 !important; /* tetap di kiri garis */
+    transform: none;
+  }
+
+  .timeline-content {
+    margin-left: 16px;
+  }
+}
+
+/* Animasi horizontal */
+.reveal-left {
+  transform: translateX(-40px);
+  opacity: 0;
+}
+
+.reveal-right {
+  transform: translateX(40px);
+  opacity: 0;
+}
+
+.reveal-left.active,
+.reveal-right.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 12px;
+  }
+
+  .timeline-content {
+    margin-left: 16px;
+  }
+}
